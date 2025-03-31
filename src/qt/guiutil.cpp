@@ -204,9 +204,9 @@ bool parseBitcoinURI(QString uri, SendCoinsRecipient *out)
     //
     //    Cannot handle this later, because dogecoin:// will cause Qt to see the part after // as host,
     //    which will lower-case it (and thus invalidate the address).
-    if(uri.startsWith("dogecoin://", Qt::CaseInsensitive))
+    if(uri.startsWith("manchitacoin://", Qt::CaseInsensitive))
     {
-        uri.replace(0, 11, "dogecoin:");
+        uri.replace(0, 11, "manchitacoin:");
     }
     QUrl uriInstance(uri);
     return parseBitcoinURI(uriInstance, out);
